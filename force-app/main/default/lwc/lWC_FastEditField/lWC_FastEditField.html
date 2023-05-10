@@ -1,0 +1,22 @@
+<template>
+  <lightning-card title="Fast field edit" icon-name="custom:custom14">
+    <div class="slds-m-around_medium">
+        <lightning-input label="Nome da conta" data-field='NomeConta' value={name} onchange={changeHandlerName}></lightning-input>
+      </div>
+      
+      <div class="slds-m-around_medium">
+        <lightning-input label="Número da conta" data-field='NumConta' value={accountnumber} onchange={changeHandlerAccountNumber}></lightning-input>
+      </div>
+      <div class="slds-m-around_medium">
+        <lightning-combobox
+            name="progress"
+            label="Tipo"
+            value={type}
+            placeholder="Select Type"
+            data-field='TipoConta'
+            options={picklistValues}
+            onchange={handleChangeCombo} ></lightning-combobox>
+      </div>
+      <lightning-button label="Update Account" variant="brand" onclick={updateContact} disabled={disabled}></lightning-button>
+  </lightning-card>
+</template>

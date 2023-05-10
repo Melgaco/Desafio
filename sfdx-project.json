@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "NTT_Desafio",
+  "namespace": "",
+  "sfdcLoginUrl": "https://gmailsandbox-3a-dev-ed.develop.my.salesforce.com",
+  "sourceApiVersion": "56.0"
+}
