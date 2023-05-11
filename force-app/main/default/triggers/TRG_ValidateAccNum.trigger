@@ -1,6 +1,7 @@
 trigger TRG_ValidateAccNum on Account (before insert, before update) {
     Utils utils = new Utils();
     String msg = 'Número do cliente é inválido';
+    Integer offset = 30;
 
     for(Account a : Trigger.new){
         
@@ -15,7 +16,7 @@ trigger TRG_ValidateAccNum on Account (before insert, before update) {
         }else if(utils.accountIsPartner(a)){
             Opportunity opp = new Opportunity(
                 Name = a.Name + ' - opp Parceiro',
-                CloseDate = Date.today().addDays(30),
+                CloseDate = Date.today().addDays(offset),
                 StageName = 'Qualification'
             );
             insert opp;
