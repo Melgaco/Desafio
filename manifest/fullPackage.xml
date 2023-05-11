@@ -17,7 +17,7 @@
         <name>ApexTrigger</name>
     </types>
     <types>
-        <members>LWC_FastEditField</members>
+        <members>lWC_FastEditField</members>
         <name>LightningComponentBundle</name>
     </types>
     <version>56.0</version>
